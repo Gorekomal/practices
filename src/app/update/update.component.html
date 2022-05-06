@@ -1,0 +1,34 @@
+<p>update works!</p>
+<h2>Reactive Form </h2>
+<div class="container">
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmitted()">
+        <div class="form-group">
+            <label for="name"><b>Name</b></label>
+            <input type="text" class="form-control" formControlName="name" required [ngClass]="{'is-invalid':isSubmitted && f.name.errors}" placeholder="Enter Your Name">
+            <div *ngIf="isSubmitted && f.name.errors?.required" class="invalid-feedback">Name Is required</div>
+        </div>
+        <div class="form-group">
+            <label for="age"><b>Age</b></label>
+            <input type="text" class="form-control" formControlName="age" required [ngClass]="{'is-invalid':isSubmitted && f.age.errors}" placeholder="Enter Your Age">
+            <div *ngIf="isSubmitted && f.age.errors?.required" class="invalid-feedback">Age Is Required</div>
+        </div>
+        <div class="form-group">
+            <label for="empId"><b>EmpId</b></label>
+            <input type="text" class="form-control" formControlName="empId" required [ngClass]="{'is-invalid':isSubmitted && f.empId.errors}" placeholder="Enter Your EmpId">
+            <div *ngIf="isSubmitted && f.empId.errors?.required" class="invalid-feedback">EmpId Is Required</div>
+        </div>
+        <div class="form-group">
+            <label for="branch"><b>Branch</b></label>
+            <input type="text" class="form-control" formControlName="branch" required [ngClass]="{'is-invalid':isSubmitted && f.branch.errors}" placeholder="Enter Your Branch">
+            <div *ngIf="isSubmitted && f.branch.errors?.required" class="invalid-feedback">Branch Is Required</div>
+        </div>
+        <div class="form-group">
+            <label for="role"><b>Role</b></label>
+            <input type="text" class="form-control" formControlName="role" required [ngClass]="{'is-invalid':isSubmitted && f.age.errors}" placeholder="Enter Your Role">
+            <div *ngIf="isSubmitted && f.role.errors?.required" class="invalid-feedback">Role Is Required</div>
+        </div>
+        <button class="btn btn-warning">Submit</button>
+    </form>
+
+</div>
+
